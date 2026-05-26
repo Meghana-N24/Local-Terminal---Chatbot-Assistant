@@ -1,4 +1,4 @@
-🤖 Local AI Terminal Assistant
+🤖 Local AI Terminal Assistant(V1 + V2)
 
 A lightweight, fully local AI-powered terminal assistant that automatically
 detects command errors and explains them in plain English.
@@ -179,6 +179,33 @@ If you genuinely need to read it:
     sudo cat /etc/shadow
 
 But be careful with sudo — it gives full system access.
+
+## 🧠 Version 2 — Memory Features
+
+Run Version 2 for context-aware assistance:
+
+```bash
+python3 assistant_v2.py
+
+Special Commands in V2
+
+Command               What It Does
+
+memory                Shows last 5 commands with status
+exit                  Saves session and exits
+any command           Runs it with memory-aware AI
+
+
+## How Memory WorksFirst time error → AI explains → saved to memory
+Second time     → "Seen 1 time before!" → smarter explanation
+Third time      → "Seen 2 times before!" → even more context
+
+## Memory Database
+All history stored locally in terminal_memory.db
+•Never sent to internet
+•Grows smarter over time
+•Persists between sessions
+
 ==================================================
 
 📁 Project Structure
@@ -210,8 +237,11 @@ may get incomplete explanations
 use on hard flat surfaces only
 
 🔮 Future Plans
-[ ] Version 2: Live terminal watching with PTY
-[ ] Version 2: Automatic error detection without manual input
+[*] Version 2: Memory and context awareness ✅
+[*] Version 2: Command History tracking ✅
+[*] Version 2: Repeat error detection ✅
+[*] Version 2: Context aware AI responses ✅
+[*] Version 2: SQLite memory database ✅
 [ ] Version 3: Color coded terminal output
 [ ] Version 3: Error history log file
 [ ] Version 4: Code file reading for smarter debugging
