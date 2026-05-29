@@ -206,6 +206,61 @@ All history stored locally in terminal_memory.db
 •Grows smarter over time
 •Persists between sessions
 
+
+## 🔍 Version 3 — Project Intelligence
+
+Run Version 3 for project-aware assistance:
+
+```bash
+python3 assistant_v3.py
+
+## Special Commands in V3
+
+COMMAND                   WHAT IT DOES
+
+project                   shows full project intelligence report
+memory                    shows command history and past projects
+exit                      Saves sessions and exits
+nano file                 Opens nano directly
+python3                   Opens python interactively
+any command               Runs with full AI analysis
+
+## What V3 Understands
+
+Detects project type:
+→ Python (requirements.txt)
+→ Node.js (package.json)
+→ Docker (Dockerfile)
+
+Reads dependencies:
+→ Flask, Django, FastAPI (Python)
+→ React, Express, Next.js (Node)
+
+Reads git history:
+→ Current branch
+→ Recent commits
+→ Modified files
+→ Connects changes to errors
+
+## Example V3 Intelligence
+
+You get: ModuleNotFoundError: flask
+
+V3 sees:
+→ Python project detected
+→ requirements.txt was recently modified
+→ Error seen 3 times before
+
+V3 says:
+"This is your Python project using Flask.
+requirements.txt was recently changed.
+You may have added flask but forgot:
+pip install -r requirements.txt"
+
+
+
+
+
 ==================================================
 
 📁 Project Structure
@@ -242,8 +297,11 @@ use on hard flat surfaces only
 [*] Version 2: Repeat error detection ✅
 [*] Version 2: Context aware AI responses ✅
 [*] Version 2: SQLite memory database ✅
-[ ] Version 3: Color coded terminal output
-[ ] Version 3: Error history log file
+[*] Version 3: Project Structure scanning ✅
+[*] Version 3: Framework detection ✅
+[*] Version 3: Git History awareness ✅
+[*] Version 3: Project-aware AI responses ✅
+[*] Version 3: Interactive program support ✅
 [ ] Version 4: Code file reading for smarter debugging
 [ ] Version 4: Memory of past errors in same session
 [ ] Version 5: Docker, npm, Git specific error handlers
